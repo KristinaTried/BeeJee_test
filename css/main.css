@@ -1,0 +1,162 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 14pt;
+}
+body{
+	background: url('../img/fon.jpg');
+	background-size: cover;
+	display: flex;
+}
+body::after{
+	content: '';
+	position: absolute;
+	top:0; left:0;
+	width: 100%; height: 100%;
+	background: rgba(0,0,0, 0.7);
+
+}
+.main_content{
+	z-index: 1;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(255,255,255, 1);
+	padding: 25px;
+	min-width: 550px;
+}
+
+h1{
+	margin-bottom: 25px;
+	font-size: 1.5em;
+}
+
+.tasks_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 25px;
+}
+
+.task{
+	position: relative;
+	width: 100%;
+	padding: 5px;
+	border: 1px #666464 solid;
+	margin-bottom: 5px;
+}
+.task p{
+	
+}
+.show_add_task, .btn_add_task, .btn_edit_task{
+	cursor: pointer;
+	background-color: #22ef87;
+	padding: 10px; border: none;
+}
+.btn_add_task{
+	display: none;
+}
+
+.show_add_task:hover,
+.btn_add_task:hover,
+.btn_edit_task:hover{
+	border: 1px solid silver;
+}
+
+.btn_add_task[disabled]{
+	opacity: 0.6;
+}
+	
+
+.formAddTask{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 25px 0 25px 0;
+	display: none;
+}
+#frm_add_username, 
+#frm_add_email{
+	width: 50%;
+}
+#frm_add_text{
+	width: 100%;
+}
+.formAddTask input,
+.formEditTask input{
+	padding: 10px 5px 10px 5px;
+	border: none; outline: none;
+	border-bottom: 2px solid seagreen;
+}
+.formEditTask input:not(.check_finish){
+	width: 100%;
+}
+.check_finish{
+	margin: 10px 0 10px 0;
+}
+
+.msg_success_added{
+	display: none;
+	font-weight: bold;
+	padding: 10px 0 10px 0;
+}
+
+.msg_success_auth{
+font-weight: bold;
+padding: 10px 0 10px 0;
+}
+
+.login_admin{
+	position: absolute;
+	top:25px; right:25px;
+	cursor: pointer;
+	display: flex;
+	
+}
+.form_auth_admin{
+	display: none;
+}
+
+.form_auth_admin input{
+	height: 25px;
+	font-size: 0.8em;
+	border: none;
+	border-bottom: 1px solid gray;
+	outline: none;
+}
+.form_auth_admin button{
+	text-decoration: none;
+	color: black;
+	text-align: right;
+	font-size: 0.9em;
+	background-color: #22ef87;
+	padding: 5px;
+	cursor: pointer;
+	border: none;
+}
+.show_form_auth{
+	cursor: pointer;
+}
+.task_status{
+	text-align: right;
+	position: absolute;
+	top: 5px; right: 5px;
+}
+.pagination{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.number_page{
+	padding: 5px;
+	border: 1px solid silver;
+	margin: 2px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.current{
+	background-color: #22ef87;
+}
+.task > p{
+	padding: 5px;
+}
